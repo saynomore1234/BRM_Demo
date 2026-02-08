@@ -1,56 +1,56 @@
 # Project Demo
 
-Multi-page website built with Next.js App Router, TypeScript, and Tailwind CSS. The structure is set up to scale as new pages and features are added.
+A multi-page website built with Next.js App Router, TypeScript, and Tailwind CSS. The project structure is organized to make it easy to add new pages and features.
 
-## Folder Structure
+## Project Structure
 
 ```
-project-demo/
+BRM_Demo/
 ├── app/
 │   ├── about/
-│   │   └── page.tsx          # About page route
-│   ├── globals.css           # Global styles and Tailwind imports
-│   ├── layout.tsx            # Root layout with Header and Footer
-│   └── page.tsx              # Homepage route
+│   │   └── page.tsx          # About page
+│   ├── globals.css           # Global styles
+│   ├── layout.tsx            # Root layout
+│   └── page.tsx              # Homepage
 ├── components/
-│   ├── Container.tsx         # Reusable container component for consistent spacing
-│   ├── Footer.tsx            # Site footer component
-│   └── Header.tsx            # Site header component
+│   ├── Container.tsx         # Layout container component
+│   ├── Footer.tsx            # Footer component
+│   └── Header.tsx            # Header component
 ├── .gitignore
-├── next.config.js            # Next.js configuration
-├── package.json              # Dependencies and scripts
-├── postcss.config.js         # PostCSS configuration for Tailwind
-├── tailwind.config.js        # Tailwind CSS configuration
-└── tsconfig.json             # TypeScript configuration
+├── next.config.js
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+└── tsconfig.json
 ```
 
-The `app/` directory follows Next.js App Router conventions - each folder becomes a route. Reusable components live in `components/`, and global styles are in `app/globals.css`.
+Routes are defined by folders in the `app/` directory. Shared components are in `components/`, and global CSS is in `app/globals.css`.
 
-## Getting Started
+## Setup
 
-First, install the dependencies:
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-Then start the dev server:
+Run the development server:
 
 ```bash
 npm run dev
 ```
 
-The site will be available at [http://localhost:3000](http://localhost:3000).
+Visit [http://localhost:3000](http://localhost:3000) to view the site.
 
-## Production Build
+## Build
 
-To create a production build:
+Create a production build:
 
 ```bash
 npm run build
 ```
 
-Run the production server locally:
+Start the production server:
 
 ```bash
 npm start
@@ -58,29 +58,29 @@ npm start
 
 ## Deployment
 
-I've set this up to deploy easily on Vercel since it works well with Next.js:
+The easiest way to deploy is using Vercel:
 
-1. Push your code to GitHub, GitLab, or Bitbucket.
+1. Push your repository to GitHub, GitLab, or Bitbucket.
 
-2. Sign in to [vercel.com](https://vercel.com) with your Git provider.
+2. Go to [vercel.com](https://vercel.com) and sign in with your Git account.
 
-3. Click "New Project" and import the repository.
+3. Import your repository as a new project.
 
-4. Vercel should auto-detect Next.js and set up the build. Just click "Deploy".
+4. Vercel will detect Next.js automatically. Click deploy.
 
-5. The site will be live in a couple minutes, and it'll auto-deploy on future pushes to your main branch.
+5. Your site will be live shortly. Future pushes to the main branch will trigger automatic deployments.
 
-You can also deploy to other platforms - just make sure to run `npm run build` and serve the `.next` output directory.
+For other hosting platforms, build the project with `npm run build` and deploy the `.next` folder along with the necessary Next.js files.
 
-## Adding New Pages
+## Adding Pages
 
-Adding pages follows a consistent pattern. For example, to create a `/contact` page:
+To add a new page, create a folder in `app/` with a `page.tsx` file. For example, to create a contact page:
 
-1. Create a new folder: `app/contact/`
-2. Add a `page.tsx` file inside it
-3. Wrap your content with the Container component to match the existing layout
+1. Create `app/contact/`
+2. Add `app/contact/page.tsx` with your page component
+3. Use the Container component to maintain consistent layout
 
-Here's what `app/contact/page.tsx` would look like:
+Example `app/contact/page.tsx`:
 
 ```tsx
 import Container from '@/components/Container'
@@ -88,13 +88,13 @@ import Container from '@/components/Container'
 export default function Contact() {
   return (
     <Container>
-      <div className="py-20">
-        <h1 className="text-4xl font-bold mb-8">Contact</h1>
-        <p>Your page content here.</p>
+      <div className="pt-24 pb-20">
+        <h1 className="text-5xl font-bold mb-8">Contact</h1>
+        <p>Page content goes here.</p>
       </div>
     </Container>
   )
 }
 ```
 
-That's it - the route is automatically available at `/contact`. Link to it with Next.js Link: `<Link href="/contact">Contact</Link>`.
+The route `/contact` will be available automatically. Use Next.js Link to navigate: `<Link href="/contact">Contact</Link>`.

@@ -3,43 +3,49 @@ import Container from '@/components/Container'
 
 export default function Home() {
   return (
-    <Container>
-      <section className="py-24 text-center">
-        <h1 className="text-5xl font-bold mb-5 text-slate-900">Project Demo</h1>
-        <p className="text-lg text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-          A straightforward multi-page website showcasing Next.js App Router with TypeScript and Tailwind CSS.
-        </p>
-        <Link
-          href="/about"
-          className="inline-block bg-slate-800 text-white px-8 py-3 rounded-md hover:bg-slate-700 transition-colors font-medium"
-        >
-          View Details
-        </Link>
-      </section>
+    <>
+      <Container>
+        <section className="pt-32 pb-20 text-center">
+          <h1 className="text-6xl font-bold mb-6 text-neutral-900 tracking-tight">
+            Project Demo
+          </h1>
+          <p className="text-xl text-neutral-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Multi-page website built with Next.js App Router, TypeScript, and Tailwind CSS.
+          </p>
+          <Link
+            href="/about"
+            className="inline-block bg-neutral-900 text-white px-10 py-4 rounded-lg hover:bg-neutral-800 transition-all duration-200 font-medium text-base"
+          >
+            Learn More
+          </Link>
+        </section>
+      </Container>
 
-      <section className="py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-8 border border-slate-200 rounded-md bg-white shadow-sm hover:shadow-md transition-shadow">
-            <h2 className="text-xl font-semibold mb-3 text-slate-800">Modular Structure</h2>
-            <p className="text-slate-600 leading-relaxed">
-              Organized component architecture that separates concerns and promotes reusability across pages.
-            </p>
+      <Container>
+        <section className="pb-24">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-10 border border-neutral-200 rounded-lg bg-white hover:border-neutral-300 transition-colors">
+              <h2 className="text-2xl font-semibold mb-4 text-neutral-900">Component-Based</h2>
+              <p className="text-neutral-600 leading-relaxed">
+                Reusable components organized in a way that makes it easy to maintain and extend functionality.
+              </p>
+            </div>
+            <div className="p-10 border border-neutral-200 rounded-lg bg-white hover:border-neutral-300 transition-colors">
+              <h2 className="text-2xl font-semibold mb-4 text-neutral-900">Fully Responsive</h2>
+              <p className="text-neutral-600 leading-relaxed">
+                Works seamlessly across different screen sizes with a mobile-first responsive design approach.
+              </p>
+            </div>
+            <div className="p-10 border border-neutral-200 rounded-lg bg-white hover:border-neutral-300 transition-colors">
+              <h2 className="text-2xl font-semibold mb-4 text-neutral-900">Scalable Architecture</h2>
+              <p className="text-neutral-600 leading-relaxed">
+                Folder structure designed to grow - adding new pages and features is straightforward.
+              </p>
+            </div>
           </div>
-          <div className="p-8 border border-slate-200 rounded-md bg-white shadow-sm hover:shadow-md transition-shadow">
-            <h2 className="text-xl font-semibold mb-3 text-slate-800">Responsive Design</h2>
-            <p className="text-slate-600 leading-relaxed">
-              Mobile-first approach ensuring consistent experience from phones to desktop screens.
-            </p>
-          </div>
-          <div className="p-8 border border-slate-200 rounded-md bg-white shadow-sm hover:shadow-md transition-shadow">
-            <h2 className="text-xl font-semibold mb-3 text-slate-800">Easy Expansion</h2>
-            <p className="text-slate-600 leading-relaxed">
-              Clear patterns for adding new routes and components without restructuring existing code.
-            </p>
-          </div>
-        </div>
-      </section>
-    </Container>
+        </section>
+      </Container>
+    </>
   )
 }
 

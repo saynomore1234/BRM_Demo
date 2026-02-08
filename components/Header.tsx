@@ -3,10 +3,13 @@ import Container from '@/components/Container'
 
 export default function Header() {
   return (
-    <header className="border-b border-slate-200 bg-white sticky top-0 z-10">
+    <header className="bg-white border-b border-neutral-200 sticky top-0 z-50 backdrop-blur-sm bg-white/95">
       <Container>
-        <nav className="py-4">
-          <Link href="/" className="text-2xl font-bold text-slate-800 hover:text-slate-600 transition-colors">
+        <nav className="flex items-center h-16">
+          <Link 
+            href="/" 
+            className="text-2xl font-bold text-neutral-900 hover:text-neutral-600 transition-colors duration-200"
+          >
             Project Demo
           </Link>
         </nav>

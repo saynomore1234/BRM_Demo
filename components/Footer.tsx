@@ -1,13 +1,15 @@
-import Container from './Container'
+import Container from '@/components/Container'
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const year = new Date().getFullYear()
   
   return (
-    <footer className="border-t border-slate-200 bg-slate-50 mt-auto">
+    <footer className="mt-auto border-t border-neutral-200 bg-neutral-50">
       <Container>
-        <div className="py-8 text-center text-slate-600 text-sm">
-          <p>&copy; {currentYear} Project Demo</p>
+        <div className="py-10 text-center">
+          <p className="text-neutral-500 text-sm">
+            &copy; {year} Project Demo
+          </p>
         </div>
       </Container>
     </footer>

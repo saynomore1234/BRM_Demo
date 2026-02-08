@@ -8,16 +8,16 @@ export const metadata: Metadata = {
   description: 'Multi-page website demonstration',
 }
 
-export default function RootLayout({
-  children,
-}: {
+interface RootLayoutProps {
   children: React.ReactNode
-}) {
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body>
+      <body className="min-h-screen flex flex-col">
         <Header />
-        <main>{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

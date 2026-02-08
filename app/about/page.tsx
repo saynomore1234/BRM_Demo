@@ -4,28 +4,28 @@ import Container from '@/components/Container'
 export default function About() {
   return (
     <Container>
-      <div className="py-20">
-        <h1 className="text-4xl font-bold mb-8 text-slate-900">About This Project</h1>
-        <div className="space-y-5 text-slate-700 max-w-3xl leading-relaxed">
+      <div className="pt-24 pb-20">
+        <h1 className="text-5xl font-bold mb-12 text-neutral-900">About</h1>
+        <div className="space-y-6 text-neutral-700 max-w-4xl leading-relaxed text-lg">
           <p>
-            Built with Next.js 14 using the App Router. I went with this approach because it gives
-            a clean file-based routing system that scales well as the project grows.
+            This project uses Next.js 14 with the App Router. The file-based routing makes it
+            really straightforward to add new pages - just create a folder and drop in a page.tsx file.
           </p>
           <p>
-            TypeScript throughout for type safety and better DX. For styling, Tailwind CSS keeps
-            things simple without needing separate stylesheet files for every component.
+            I'm using TypeScript for type checking and Tailwind CSS for styling. Tailwind works
+            well here since you can style components directly without jumping between files.
           </p>
           <p>
-            The component structure separates layout elements (Header, Footer) from page content,
-            so adding new pages is straightforward while keeping things consistent.
+            Components are split into layout pieces (Header, Footer) and page content. This keeps
+            things organized and makes it easy to maintain consistency across different pages.
           </p>
         </div>
-        <div className="mt-10">
+        <div className="mt-12">
           <Link
             href="/"
-            className="inline-block bg-slate-600 text-white px-6 py-3 rounded-md hover:bg-slate-700 transition-colors font-medium"
+            className="inline-block bg-neutral-700 text-white px-8 py-3 rounded-lg hover:bg-neutral-800 transition-colors duration-200 font-medium"
           >
-            Return Home
+            Back to Home
           </Link>
         </div>
       </div>
